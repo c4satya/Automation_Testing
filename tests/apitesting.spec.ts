@@ -44,14 +44,16 @@ test('post api testing',async({request})=>{
 
 //create user with headers
 test.fail('create user with headers',async({request})=>{
+    const token = 'real-token';
     const response = await request.post('https://reqres.in/api/users',{
-        data:{
-            name:'Chandan Kumar',
-            job:'All Rounder'
-        },
+        
         headers:{
             'Content-Type':'application/json',
-            'Authorization':'Bearer token'
+            'Authorization':`Bearer ${token}`
+        },
+        data:{
+            name:'Chandan Kumar',
+            job:'QA Engineer'
         }
     });
     expect(response.status()).toBe(201);
@@ -60,6 +62,37 @@ test.fail('create user with headers',async({request})=>{
     expect(data.name).toBe('Chandan Kumar');
     expect(data.job).toBe('All Rounder');
 });
+test.only('API Authentication using Bearer Token', async({request})=>{
+    // step 1 : Login
+    const loginResponse = await request.post('https://api.qaautomationlabs.com/v1/auth/login',
+        {
+            data:{
+                email: 'qa@demo.io',
+                password:'Password123'
+            }
+        })
+console.log('Status Code:', loginResponse.status());
+console.log('Error Body:', await loginResponse.text());    
+    expect(loginResponse.ok()).toBeTruthy();
+    //step2: get token
+
+   const {accessToken}  = (await loginResponse.json()).data;
+    
+    //step 3: send token to api
+
+    const response = await request.get(
+        "https://api.qaautomationlabs.com/v1/auth/me",
+        {headers: {
+            "Authorization": `bearer ${accessToken}`
+        }}
+    );
+    expect(response.ok()).toBeTruthy();
+
+        const body=await response.json();
+        console.log(body);
+
+
+})
 
 //put api testing
 test('put api testing',async({request})=>{

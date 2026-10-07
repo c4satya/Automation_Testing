@@ -1,0 +1,211 @@
+[
+  {
+    "description": "  Scenario : Valid credentials login\n    Given user is on the login page\n    When user logs in with valid credentials \"standard_user\" and \"secret_sauce\"\n    Then Verify Dashboard page is loaded successfully",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-login-functionality;login-verification-with-multiple-users",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Login verification with multiple users",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1408444924
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1871084343
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "user is on the login page",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:18"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 508728979
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user logs in using credentials from \"multicredentials.json\"",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:33"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33592328
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Verify Dashboard page is loaded successfully",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:44"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 663673215
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login-functionality;valid-credentials-login",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Valid credentials login",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1556191638
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1875747595
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user is on the login page",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:18"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 268536646
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "user logs in with valid credentials \"standard_user\" and \"secret_sauce\"",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:26"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 69495691
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "Verify Dashboard page is loaded successfully",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:44"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 711214906
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login-functionality;valid-credentials-login",
+        "keyword": "Scenario Outline",
+        "line": 23,
+        "name": "Valid credentials login",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1465167370
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1973625701
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user is on the login page",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:18"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 428310402
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "user logs in with valid credentials \"problem_user\" and \"secret_sauce\"",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:26"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 34794968
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "Verify Dashboard page is loaded successfully",
+            "match": {
+              "location": "features/step_definitions/validlogin.ts:44"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 756736557
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Login Functionality",
+    "tags": [],
+    "uri": "features/validologin.feature"
+  }
+]
