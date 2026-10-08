@@ -19,7 +19,7 @@ test('special locators example', async ({ page }) => {
 });
 
 //chaining using filters example and last() method is used to locate the last element in a list of elements that match a given selector. This can be useful when there are multiple elements on the page that match the same selector, and you want to interact with the last one specifically.       
-test.only('Chaining using filters example', async ({ page }) => {    
+test('Chaining using filters example', async ({ page }) => {    
     await page.goto('https://demoqa.com/buttons');
     const buttons = page.locator('button').filter({ hasText: 'Click Me' }).last(); 
     await buttons.click();

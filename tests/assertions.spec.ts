@@ -161,7 +161,7 @@ await expect(page.locator('#doubleClickMessage')).toContainText("You have done a
 });
 
 
-test.only("Drag and Drop using dragTo on DemoQA",async ({page})=>{
+test("Drag and Drop using dragTo on DemoQA",async ({page})=>{
     await page.goto('https://qaplayground.com/practice/drag-drop');
     const source = page.getByTestId('dd-item');
     const  target = page.getByTestId('dd-drop-zone');

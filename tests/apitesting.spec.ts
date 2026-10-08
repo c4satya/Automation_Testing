@@ -62,7 +62,7 @@ test.fail('create user with headers',async({request})=>{
     expect(data.name).toBe('Chandan Kumar');
     expect(data.job).toBe('All Rounder');
 });
-test.only('API Authentication using Bearer Token', async({request})=>{
+test('API Authentication using Bearer Token', async({request})=>{
     // step 1 : Login
     const loginResponse = await request.post('https://api.qaautomationlabs.com/v1/auth/login',
         {
